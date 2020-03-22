@@ -5,9 +5,9 @@ import models.EmailAddress;
 public class EmailHelper {
 
     public static String getFullEmailAddress(final EmailAddress emailAddress) {
-        if (!emailAddress.getSuffix().contains("@")) {
-            emailAddress.setSuffix("@" + emailAddress.getSuffix());
+        if (!emailAddress.getDomain().contains("@")) {
+            emailAddress.setDomain("@" + emailAddress.getDomain());
         }
-        return emailAddress.getLogin() + emailAddress.getSuffix();
+        return emailAddress.getLogin() + emailAddress.getDomain();
     }
 }

@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class EmailAddress {
     private String login;
-    private String suffix;
+    private String domain;
 
-    public EmailAddress(String login, String suffix) {
+    public EmailAddress(String login, String domain) {
         this.login = login;
-        this.suffix = suffix;
+        this.domain = domain;
     }
 }
